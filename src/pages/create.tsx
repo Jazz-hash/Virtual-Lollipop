@@ -40,7 +40,7 @@ const Create = () => {
   const [color3, setColor3] = React.useState('#deaa43')
   const [addLolly, { data }] = useMutation(ADD_LOLLY)
 
-  useEffect(() => {
+  React.useEffect(() => {
     async function runHook() {
       const response = await fetch('https://api.netlify.com/build_hooks/5f9c80194077350088b2d87c', {
         method: 'POST'
