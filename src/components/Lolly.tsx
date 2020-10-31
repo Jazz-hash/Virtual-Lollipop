@@ -1,10 +1,11 @@
 import React from 'react'
-export interface LollyProps {
+
+export interface Props {
   top: string
   middle: string
   bottom: string
 }
-export const Lolly: React.FC<LollyProps> = ({ top, middle, bottom }) => {
+export const Lolly: React.FC<Props> = ({ top, middle, bottom }) => {
   return (
     <svg
       className="lollipop"
