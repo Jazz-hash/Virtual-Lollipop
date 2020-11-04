@@ -5,12 +5,13 @@ export interface Props {
   reciever: string
   message: string
   sender: string
+  text?: string
 }
 
-const Result: React.FC<Props> = ({ link, reciever, message, sender }) => {
+const Result: React.FC<Props> = ({ link, reciever, message, sender, text = 'Share lolly with this link:' }) => {
   return (
     <div className="result">
-      <h4 style={{ color: 'white' }}>Share lolly with this link:</h4>
+      <h4 style={{ color: 'white' }}>{text}</h4>
       <h3>{`https://jazzel-lolly.netlify.app/lolly/${link}`}</h3>
       <div className="result__details">
         <p className="reciever">{reciever} -----</p>
