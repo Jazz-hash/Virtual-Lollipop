@@ -1,20 +1,27 @@
-import React from 'react'
 import Header from '../components/Header'
 import { Lolly } from '../components/Lolly'
 import Result from '../components/Result'
+import * as React from 'react'
+import Page from '../components/Page'
+import Container from '../components/Container'
+import IndexLayout from '../layouts'
 
 const Template = ({ pageContext: { color1, color2, color3, reciever, sender, message, link } }) => {
   return (
-    <div>
-      <Header />
-      <div className="lollyFormDiv">
-        <div>
-          <Lolly top={color1} middle={color2} bottom={color3} />
-        </div>
+    <IndexLayout>
+      <Page>
+        <Container>
+          <Header />
+          <div className="lollyFormDiv">
+            <div>
+              <Lolly top={color1} middle={color2} bottom={color3} />
+            </div>
 
-        <Result link={link} reciever={reciever} sender={sender} message={message} />
-      </div>
-    </div>
+            <Result link={link} reciever={reciever} sender={sender} message={message} />
+          </div>
+        </Container>
+      </Page>
+    </IndexLayout>
   )
 }
 
