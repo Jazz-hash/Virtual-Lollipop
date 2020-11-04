@@ -55,6 +55,17 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        // This type will contain remote schema Query type
+        typeName: 'GCMS',
+        // This is field under which it's accessible
+        fieldName: 'get_lollies',
+        // Url to query from
+        url: 'https://jazzel-lolly.netlify.app/.netlify/functions/lolly'
+      }
+    }
   ]
 }
